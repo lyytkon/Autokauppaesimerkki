@@ -10,13 +10,13 @@ function App() {
   return (
     <>
     <AppBar position="static">
-      <Toolbar>
-        <Typography variant="h6">Car Shop</Typography>
-      </Toolbar>
+        <Toolbar>
+          <Typography variant="h6">Car Shop</Typography>
+        </Toolbar>
       </AppBar>
       <Container maxWidth="xl">
-        <CssBaseline />
-        <CarList />
+      <CssBaseline />
+      <CarList />
     </Container>
 
     </>
