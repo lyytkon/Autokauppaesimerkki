@@ -1,6 +1,7 @@
 import { use, useEffect, useState } from "react"
 import { DataGrid } from '@mui/x-data-grid';
 import Button from '@mui/material/Button';
+import AddCar from "./AddCar";
 
 // Import GirdColDef type
 import type { GridColDef, GridRowParams } from '@mui/x-data-grid';
@@ -13,7 +14,6 @@ type TCar = {
     modelYear: number;
     price: number;
 }
-
 
 export default function CarList () {
     const [cars, setCars] = useState<TCar[]>([]);
@@ -89,7 +89,8 @@ export default function CarList () {
 
     return (
         <>
-        <Button variant="outlined">Add car</Button>
+        {/* Korvattu nappi AddCar-komponentilla */}
+        <AddCar onAdded={getCars} />
         <div style={{ height: '100vh', width: '90%', margin: 'auto' }}>
         <DataGrid
             rows={cars}
